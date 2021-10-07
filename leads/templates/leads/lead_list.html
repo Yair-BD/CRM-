@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lead list</title>
+</head>
+<body>
+<h1>Hey man all your leads are here</h1>
+<table>
+ {% for lead in leads %}
+    <tr>
+        <td><a href="{% url 'detail' lead.id %}">{{lead}}</a> </td>
+        <td><a href="{% url 'update_lead' lead.id %}">Update</a> </td>
+        <td><a href="{% url 'delete_lead' lead.id %}">Delete</a> </td>
+
+    </tr>
+{% endfor %}
+
+</table>
+ <a href="{% url 'lead_create'%}">Create lead</a>
+
+</body>
+</html>

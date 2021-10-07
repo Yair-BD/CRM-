@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detil</title>
+</head>
+<body>
+<h1> {{leads.first_name}}'s details :</h1>
+<ul>
+    <li>Name :{{leads.first_name}} {{leads.last_name }}</li>
+    <li>Age :{{leads.age}}</li>
+    <li>Agent :{{leads.agent}}</li>
+
+
+</ul>
+<a href="{% url 'delete_lead' leads.id %}">Delete</a> 
+<a href="{% url 'lead_list'%}">All leads</a>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<h3>Delete Lead</h3>
+
+<form method="POST" action="">
+	{% csrf_token %}
+	<h1>Do you want to delete {{lead}} ?</h1>
+
+	{{form}}
+	<input type="submit" name="Delete"> <a href="{% url 'lead_list'%}">Cancel</a>
+</form>
